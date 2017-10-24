@@ -27,18 +27,18 @@ All you need to do is choose one version and use it as follows `install.sh -i 17
 
 #### List of available versions
 
-* 17.05.0~ce-0~raspbian-jessie (Not tested)
-* 17.04.0~ce-0~raspbian-jessie (Not tested)
-* 17.03.1~ce-0~raspbian-jessie (Might work)
-* 17.03.0~ce-0~raspbian-jessie (Recommended)
-* 1.13.1-0~raspbian-jessie (Recommended)
-* 1.13.0-0~raspbian-jessie (Recommended)
-* 1.12.6-0~raspbian-jessie (Recommended | **Default**)
-* 1.12.5-0~raspbian-jessie (Recommended)
-* 1.12.4-0~raspbian-jessie (Recommended)
-* 1.12.3-0~jessie (Recommended)
-* 1.12.2-0~jessie (Recommended)
-* 1.12.1-0~jessie (Recommended)
+* `17.05.0~ce-0~raspbian-jessie` (Not tested)
+* `17.04.0~ce-0~raspbian-jessie` (Not tested)
+* `17.03.1~ce-0~raspbian-jessie` (Might work)
+* `17.03.0~ce-0~raspbian-jessie` (Recommended)
+* `1.13.1-0~raspbian-jessie` (Recommended)
+* `1.13.0-0~raspbian-jessie` (Recommended)
+* `1.12.6-0~raspbian-jessie` (Recommended | **Default**)
+* `1.12.5-0~raspbian-jessie` (Recommended)
+* `1.12.4-0~raspbian-jessie` (Recommended)
+* `1.12.3-0~jessie` (Recommended)
+* `1.12.2-0~jessie` (Recommended)
+* `1.12.1-0~jessie` (Recommended)
 
 ## More info about Kubernetes and ARM
 
