@@ -1,6 +1,6 @@
 # Kubernetes for ARM
 
-This tiny script was created to easily install Docker + Kubernetes on *a fresh install* (recommended) Raspbian/HypriotOS.
+This tiny script was created to easily install Docker + Kubernetes on *a fresh install* (recommended) Raspbian/[HypriotOS](#hypriotos).
 
 It installs [kubeadm](https://kubernetes.io/docs/setup/independent/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl), one of the recommended docker versions (as mentioned in [install-kubeadm/#installing-docker](https://kubernetes.io/docs/setup/independent/install-kubeadm/#installing-docker)) and then sets on hold docker to avoid being upgraded whenever `apt-get upgrade` is executed.
 
@@ -8,7 +8,15 @@ It installs [kubeadm](https://kubernetes.io/docs/setup/independent/install-kubea
 
 * Simply run `wget -qO - https://git.io/vdhfK | sudo bash -`
 
-* Or clone this repo into your RPi, grant execution permission `chmod +x install.sh`. **It must run as root or sudo.**
+* Or download the script into your RPi.
+
+``` sh
+wget -q https://git.io/vdhfK -O install.sh && \
+chmod +x install.sh && \
+./install.sh
+```
+
+**Note:** it must be run as root or sudo.
 
 ### Options
 
@@ -39,6 +47,12 @@ All you need to do is choose one version and use it as follows `install.sh -i 17
 * `1.12.3-0~jessie` (Recommended)
 * `1.12.2-0~jessie` (Recommended)
 * `1.12.1-0~jessie` (Recommended)
+
+## HypriotOS
+
+It's a docker-ready raspbian-based distro for Raspberry Pi. Get it [here](https://github.com/hypriot/image-builder-rpi/releases).
+
+You can use [Flash](https://github.com/hypriot/flash) (a utility developed by the HypriotOS Team) to flash the image on the SD card.
 
 ## More info about Kubernetes and ARM
 
