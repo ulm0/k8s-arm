@@ -3,7 +3,7 @@
 set -e
 
 function print_version(){
-    echo "K8s for ARM v0.0.1"
+    echo "Kubernetes for ARM v1.0"
     exit 1
 }
 
@@ -15,7 +15,7 @@ function print_help() {
     echo "    -i [version]  Specify docker version to install"
     echo
     echo "You must specify a docker version. See:"
-    echo "https://gitlab.com/klud/k8s-arm#installing-a-given-version"
+    echo "https://github.com/untalpierre/k8s-arm#installing-a-given-version"
     exit 1
 }
 
