@@ -49,7 +49,7 @@ install_kubernetes(){
     apt-get install -qq -y kubelet kubeadm kubectl
 }
 
-_echo "This will install Kubernetes & D ocker on your Raspbian/HypriotOS system"
+_echo "This will install Kubernetes & Docker on your Raspbian/HypriotOS system"
 update
 _echo "Installing dependencies..."
 apt-get install -qq -y apt-transport-https
