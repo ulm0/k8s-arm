@@ -6,7 +6,7 @@ It installs [kubeadm](https://kubernetes.io/docs/setup/independent/install-kubea
 
 ## Usage
 
-* Simply run `wget -qO - https://raw.githubusercontent.com/untalpierre/k8s-arm/master/install.sh | sudo bash -`
+* Simply run `wget -qO - https://git.io/vdhfK | sudo bash -`
 
 * Or clone this repo into your RPi, grant execution permission `chmod +x install.sh`. **It must run as root or sudo.**
 
