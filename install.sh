@@ -15,7 +15,7 @@ function print_help() {
     echo "    -i [version]  Specify docker version to install"
     echo
     echo "You must specify a docker version. See:"
-    echo "https://github.com/untalpierre/k8s-arm#usage"
+    echo "https://gitlab.com/klud/k8s-arm#installing-a-given-version"
     exit 1
 }
 
