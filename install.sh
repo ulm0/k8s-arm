@@ -56,7 +56,7 @@ function info() {
 
 # Refresh repos
 function update(){
-    info "Updating..."
+    info "Info" "Updating repos..."
     apt-get -qq update
 }
 
