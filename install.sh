@@ -60,6 +60,14 @@ function update(){
     apt-get -qq update
 }
 
+
+# Install dependencies according to 
+# https://docs.docker.com/engine/installation/linux/docker-ce/debian/#set-up-the-repository
+function deps(){
+    info "Info" "Installing dependencies..."
+    apt-get install -qq -y apt-transport-https ca-certificates curl gnupg2 software-properties-common
+}
+
 # Get GPG Keys
 function get_keys(){
     info "Keys" "Getting key for ${1}"
@@ -132,7 +140,6 @@ do
             ;;
         -i)
             docker_version="$2"
-            echo "Docker version = ${2}"
             shift
             shift
             ;;
@@ -140,11 +147,11 @@ do
 done
 
 if [[ -z "$docker_version" ]]; then
-    info "Start" "No docker version specified, using default"
+    info "Start" "No docker version specified, installing default"
     docker_version="1.12.6-0~raspbian-jessie"
 fi
 
-info "Start" "Will remove any docker installed on your system"
+info "Start" "This tool will remove any docker installed on the system"
 info "Start" "and install a suitable docker version for kubernetes"
 read -p "Really proceed? (y)es / (n)o " -n 1 -r
 echo
@@ -155,8 +162,7 @@ then
 fi
 
     update
-info "Deps" "Installing apt-transport-https..."
-    apt-get install -qq -y apt-transport-https
+    deps
     install_docker "${docker_version}"
     install_kubernetes
 info "Info" "Docker and Kubernetes have been installed"
