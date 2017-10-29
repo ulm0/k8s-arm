@@ -6,14 +6,14 @@ It installs [kubeadm](https://kubernetes.io/docs/setup/independent/install-kubea
 
 ## Usage
 
-* Simply run `wget -qO - https://git.io/vdhfK | sudo bash -`
+* Simply run `wget -qO - https://git.io/vFLXv | sudo bash -`
 
 * Or download the script into your RPi.
 
 ``` sh
-wget -q https://git.io/vdhfK -O install.sh && \
-chmod +x install.sh && \
-./install.sh
+wget -q https://git.io/vFLXv -O k8s-arm && \
+chmod +x k8s-arm && \
+./k8s-arm
 ```
 
 **Note:** it must be run as root or sudo.
@@ -31,7 +31,7 @@ chmod +x install.sh && \
 
 ### Installing a given version
 
-All you need to do is choose one version and use it as follows `install.sh -i 17.03.0~ce-0~raspbian-jessie`.
+All you need to do is choose one version and use it as follows `k8s-arm -i 17.03.0~ce-0~raspbian-jessie`.
 
 #### List of available versions
 

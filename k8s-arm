@@ -146,25 +146,28 @@ do
     esac
 done
 
-if [[ -z "$docker_version" ]]; then
-    info "Start" "No docker version specified, installing default"
-    docker_version="1.12.6-0~raspbian-jessie"
-fi
-
 info "Start" "This tool will remove any docker installed on the system"
-info "Start" "and install a suitable docker version for kubernetes"
+if [[ -z "$docker_version" ]]; then
+    info "Start" "and install a suitable docker version for kubernetes"
+else
+    info "Start" "and install the chosen docker version for kubernetes"
+fi
 read -p "Really proceed? (y)es / (n)o " -n 1 -r
 echo
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     echo "Quitting."
     exit
 fi
 
-    update
-    deps
-    install_docker "${docker_version}"
-    install_kubernetes
+if [[ -z "$docker_version" ]]; then
+    info "Info" "No docker version specified, installing default"
+    docker_version="1.12.6-0~raspbian-jessie"
+fi
+
+update
+deps
+install_docker "${docker_version}"
+install_kubernetes
 info "Info" "Docker and Kubernetes have been installed"
 info "Info" "You might want to check:"
 info "Info" "docker version"
