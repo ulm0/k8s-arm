@@ -31,24 +31,17 @@ echo y | ./k8s-arm
 
 You can specify a version to install as follows `./k8s-arm -i 17.12`.
 
-**NOTE:** *If a version is not specified, then* `17.03` *is going to be installed.*
+**NOTE:** *If a version is not specified, then* `17.03` *will be be installed.*
 
 #### List of available versions
 
 | **Version** | **State**|
 |:-:|:-:|
-| `18.03.1` | Might work |
-| `18.03.0` | Might work |
-| `17.12.1` | Works |
-| `17.12.0` | Works |
-| `17.09.1` | Works |
-| `17.09.0` | Works |
-| `17.06.2` | Works |
-| `17.06.1` | Works |
-| `17.06.0` | Works |
-| `17.03.2` | **Default** |
-| `17.03.1` | Recommended |
-| `17.03.0` | Recommended |
+| `18.03` | Might work |
+| `17.12` | Works |
+| `17.09` | Works |
+| `17.06` | Works |
+| `17.03` | **Default** |
 
 ## HypriotOS
 
